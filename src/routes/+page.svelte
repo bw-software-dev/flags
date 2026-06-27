@@ -27,12 +27,15 @@
   </a>
 
   <div class="flex not-md:flex-col gap-10 items-center justify-center">
-    <figure class="w-full p-2">
-      <img src="https://flagcdn.com/{country.code}.svg" alt={country.label} />
+    <figure class="w-full">
+      <img
+        class="rounded-md"
+        src="https://flagcdn.com/{country.code}.svg"
+        alt={country.label}
+      />
     </figure>
-    <figure class="w-full p-2">
+    <figure class="w-full p-10 aspect-square">
       <PieChart
-        outerRadius={160}
         innerRadius={-20}
         cornerRadius={10}
         padAngle={0.02}
@@ -40,7 +43,6 @@
         key="color"
         value="percentage"
         cRange={map.map((e) => e.color)}
-        height={300}
         class="text-white"
         labels={{
           placement: "callout",
