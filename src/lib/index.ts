@@ -41,7 +41,6 @@ export const countPixels = (url: string) =>
       if (pixelMap.has("white")) {
         const newValue = (pixelMap.get("white")! * 4) / data.length;
         if (newValue < 0.01) {
-          console.log("Deleting", newValue);
           pixelMap.delete("white");
         } else {
           pixelMap.set("white", newValue);
